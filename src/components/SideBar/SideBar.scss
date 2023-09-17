@@ -1,0 +1,95 @@
+.yt__side-bar {
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 5px;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: var(--black-color);
+  width: 250px;
+  flex-direction: column;
+  height: 100vh;
+  padding-right: 10px;
+  color: var(--lightGray-color);
+  font-family: var(--font-base);
+  z-index: 0;
+
+  .yt__sidebar-scroll-container {
+    max-height: calc(100% - 50px);
+    overflow-y: auto;
+  }
+
+  .links {
+    display: block;
+    width: 248px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .links img {
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+  }
+
+  .links:hover:not(:first-child) {
+    background-color: var(--border-color);
+    border-radius: 8px;
+    width: 90%;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .links:first-child {
+    /* Your active link styles here */
+    background-color: var(--border-color);
+    border-radius: 8px;
+    width: 90%;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .seperator {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    margin: 20px 0;
+  }
+
+  .yt__subs {
+    font-size: 1.3rem;
+    line-height: normal;
+    color: var(--text-color);
+    margin-left: 15px;
+    font-weight: 400;
+  }
+
+  .top-sec {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px;
+  }
+
+  @media (max-width: 768px) {
+    /* Responsive adjustments for tablets and mobile */
+    display: none; /* Hide the entire sidebar */
+  }
+}
+
+.yt__sidebar.collapsed a {
+  width: 58px;
+  transition: 1s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Add your collapsed styles if needed */

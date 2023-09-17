@@ -1,0 +1,117 @@
+.yt__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px 2px;
+  padding: 10px;
+  height: 88px;
+  max-width: 100%;
+  z-index: 0;
+  /* Add fixed positioning */
+  position: fixed;
+  top: -30;
+  left: 0;
+  right: 0;
+  background-color: var(--black-color);
+
+  @media (max-width: 768px) {
+    /* Responsive adjustments for tablets */
+    height: 64px;
+    padding: 5px 10px;
+  }
+
+  // Navbar left items
+  .yt__navbar-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+  }
+
+  // Navbar Center items
+  .yt__navbar-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .yt__search-container {
+      display: flex;
+      width: 650px;
+      height: 50px;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--border-color);
+      background-color: var(--mainBG-color);
+      border-radius: 40px;
+
+      @media (max-width: 768px) {
+        /* Responsive adjustments for tablets */
+        width: 80%;
+      }
+
+      .yt__search-input {
+        border: none;
+        width: 84%;
+        height: 90%;
+        background-color: var(--black-color);
+        border-radius: 40px 0 0 40px;
+        padding-left: 10px;
+
+        @media (max-width: 768px) {
+          /* Responsive adjustments for tablets */
+          width: 70%;
+        }
+      }
+
+      .yt__search-input::placeholder {
+        color: var(--lightGray-color);
+        font-family: var(--font-base);
+        font-size: 16px;
+        margin-right: 15px;
+        padding: 3px;
+      }
+
+      .yt__search-input:focus {
+        outline: 2px solid #3ea6ff;
+        caret-color: var(--lightGray-color);
+        line-height: 10px;
+        accent-color: auto;
+      }
+
+      .yt__img {
+        margin-right: 30px;
+        cursor: pointer;
+      }
+    }
+
+    .yt__microphone {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border-style: none;
+      background-color: var(--mainBG-color);
+      position: relative;
+      margin-left: 10px;
+      cursor: pointer;
+
+      img {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+      }
+
+      &:hover {
+        background-color: var(--border-color);
+      }
+    }
+  }
+
+  // Navbar Right items
+  .yt__navbar-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+}
